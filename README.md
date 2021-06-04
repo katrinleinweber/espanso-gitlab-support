@@ -1,4 +1,19 @@
-# espanso-package-example
-An example on how to create an espanso package.
+# GitLab Support snippets for Espanso.org
 
-For more information, read the [documentation](https://espanso.org/docs/)
+An experiment in GitLab-shared text expansions/snippets.
+
+## How to install
+
+Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository).
+
+Until GitLab is supported as a remote repo,
+copy the `trigger`s you want from
+[latest version's `package.yml`](https://gitlab.com/gitlab-com/support/toolbox/espanso/find_file/master)
+into [your own Espanso `config.yml`](https://espanso.org/docs/get-started/#creating-your-own-match).
+
+## Other useful/noteworthy Espanso packages
+
+- @katrinleinweber's [effective-markdown](https://github.com/katrinleinweber/espanso-effective-markdown)
+- [Mac Symbols](https://hub.espanso.org/packages/mac-symbols/)
+- [Shruggie](https://hub.espanso.org/packages/shruggie/)
+- [What the Commit](https://hub.espanso.org/packages/wtc/)

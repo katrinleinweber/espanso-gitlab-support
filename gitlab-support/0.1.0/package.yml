@@ -1,0 +1,17 @@
+# See https://gitlab.com/gitlab-com/support/toolbox/espanso
+
+name: gitlab-support
+parent: default
+
+matches:
+
+  # More useful GitLabSOS snippet than in ZD macro
+  - trigger: "[gsos"
+    replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) shortly after reproducing the problem once more"
+
+  # Add Support- & Review Guideline-related quick actions
+  # See https://about.gitlab.com/handbook/engineering/ux/technical-writing/#designated-technical-writers,
+  # https://docs.gitlab.com/ee/development/code_review.html#dogfooding-the-reviewers-feature,
+  # and https://about.gitlab.com/handbook/support/engineering/#support-team-contributions
+  - trigger: "/stc"
+    replace: "/label ~"Support Team Contribution\n/assign me\n/assign_reviewer @""
