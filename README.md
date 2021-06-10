@@ -17,3 +17,4 @@ into [your own Espanso `config.yml`](https://espanso.org/docs/get-started/#creat
 - [Mac Symbols](https://hub.espanso.org/packages/mac-symbols/)
 - [Shruggie](https://hub.espanso.org/packages/shruggie/)
 - [What the Commit](https://hub.espanso.org/packages/wtc/)
+- See also [our discussion in support-team-meta#3539](https://gitlab.com/gitlab-com/support/support-team-meta/-/issues/3539#note_597649648)
