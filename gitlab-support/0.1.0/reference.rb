@@ -11,7 +11,7 @@ class Reference
   end
 
   def construct
-    raise(ArgumentError, 'Input is empty! Please use a URL.') if url.nil?
+    return '' if url.nil? || url.empty?
 
     url
       .sub(%r{^https?://git(la|hu)b.com}, '') # Remove domain

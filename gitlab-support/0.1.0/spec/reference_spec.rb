@@ -36,7 +36,7 @@ RSpec.describe Reference do
 
     it 'raises an error for empty input' do
       expect(Reference.new(ENV['SOME_CLIPBOARD']).construct)
-        .to raise_error(ArgumentError, 'Input is empty! Please use a URL.')
+        .to eq ('')
     end
   end
 end
