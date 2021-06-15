@@ -25,4 +25,4 @@ matches:
         params:
           args:
             - ruby
-            - "%CONFIG%/packages/gitlab-support/0.1.0/reference.rb"
+            - "%CONFIG%/../../Application Support/espanso/packages/gitlab-support/reference.rb"
