@@ -15,3 +15,14 @@ matches:
   # and https://about.gitlab.com/handbook/support/engineering/#support-team-contributions
   - trigger: "/stc"
     replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
+
+  # Format verbose issue/MR/epics links in Markdown
+  - trigger: "[id"
+    replace: "[$|$ ({{id}})]({{clipboard}})"
+    vars:
+      - name: id
+        type: script
+        params:
+          args:
+            - ruby
+            - "%CONFIG%/packages/gitlab-support/0.1.0/reference.rb"
