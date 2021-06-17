@@ -46,3 +46,16 @@ matches:
     replace : "A large ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
   - trigger : "~lucc"
     replace : "A large ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+
+  # Format verbose issue links in Markdown with the name of the issue
+  - trigger: "[issue"
+    replace: "[$|$ ({{iname}})]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+      - name: iname
+        type: shell
+        params:
+          cmd: 'ruby "$(espanso path config)/../../Application Support/espanso/packages/gitlab-support/html_parser.rb" ${ESPANSO_CLIPBOARD}'
+          debug: true
+
