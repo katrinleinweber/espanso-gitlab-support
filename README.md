@@ -4,12 +4,13 @@ An experiment in GitLab-shared text expansions/snippets.
 
 ## How to install
 
-Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository).
+Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository),
+but as this repo is mirrored to GitHub, this works:
 
-Until GitLab is supported as a remote repo,
-copy the `trigger`s you want from
-[latest version's `package.yml`](https://gitlab.com/gitlab-com/support/toolbox/espanso/find_file/master)
-into [your own Espanso `config.yml`](https://espanso.org/docs/get-started/#creating-your-own-match).
+```shell
+espanso install gitlab-support --external  \
+    https://github.com/katrinleinweber/espanso-gitlab-support
+```
 
 ## Other useful/noteworthy Espanso packages
 
