@@ -30,3 +30,17 @@ matches:
           args:
             - ruby
             - "%CONFIG%/../../Application Support/espanso/packages/gitlab-support/reference.rb"
+
+  # Customer comments for issues after internal requests
+  #   1. copy internal URL into clipboard
+  #   2. add (partial) quote if available
+  - trigger : "~cc"
+    replace : "A ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+  - trigger : "~pcc"
+    replace : "A ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+  - trigger : "~ucc"
+    replace : "A ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+  - trigger : "~lpcc"
+    replace : "A large ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+  - trigger : "~lucc"
+    replace : "A large ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
