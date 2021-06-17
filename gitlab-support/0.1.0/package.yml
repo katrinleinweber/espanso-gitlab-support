@@ -3,6 +3,10 @@
 name: gitlab-support
 parent: default
 
+global_vars:
+  - name: "clipboard"
+    type: "clipboard"
+
 matches:
 
   # More useful GitLabSOS snippet than in ZD macro
