@@ -9,9 +9,11 @@ global_vars:
 
 matches:
 
-  # More useful GitLabSOS snippet than in ZD macro
+  # GitLabSOS & KubeSOS
   - trigger: "[gsos"
-    replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) shortly after reproducing the problem once more"
+    replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) shortly after reproducing the problem once more."
+  - trigger: "[ksos"
+    replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) shortly after reproducing the problem once more."
 
   # Add Support- & Review Guideline-related quick actions
   # See https://about.gitlab.com/handbook/engineering/ux/technical-writing/#designated-technical-writers,
