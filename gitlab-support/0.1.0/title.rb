@@ -4,9 +4,8 @@
 # Progressively remove non-ID (and superfluous) URL parts
 # https://github.com/federico-terzi/espanso/issues/487#issuecomment-858903403
 
-require 'nokogiri'
 require 'httparty'
-require 'pry'
+require 'nokogiri'
 
 # Obtain title via provided URL
 class Title
