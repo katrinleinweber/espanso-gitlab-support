@@ -31,7 +31,7 @@ matches:
         params:
           args:
             - ruby
-            - "%CONFIG%/../../Application Support/espanso/packages/gitlab-support/reference.rb"
+            - "$(espanso path packages)/gitlab-support/reference.rb"
 
   # Customer comments for issues after internal requests
   #   1. copy internal URL into clipboard
