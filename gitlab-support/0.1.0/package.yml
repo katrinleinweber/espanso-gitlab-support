@@ -22,22 +22,43 @@ matches:
   - trigger: "/stc"
     replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
 
-  # Format verbose issue/MR/epics links in Markdown
-  - trigger: "[id"
-    replace: "[$|$ \"{{title}}\"({{id}})]({{clipboard}})"
+
+  # Components of verbose Markdown links, see below
+
+  - trigger: '""title'
+    replace: "\"{{title}}\""
     vars:
+      - name: "clipboard"
+        type: "clipboard"
       - name: title
-        type: script
+        type: shell
         params:
-          args:
-            - ruby
-            - "%CONFIG%/../../Application Support/espanso/packages/gitlab-support/title.rb"
-      - name: id
-        type: script
+          cmd: 'ruby "$(espanso path packages)"/gitlab-support/title.rb ${ESPANSO_CLIPBOARD}'
+  - trigger: '()refer'
+    replace: "({{refer}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+      - name: refer
+        type: shell
         params:
-          args:
-            - ruby
-            - "%CONFIG%/../../Application Support/espanso/packages/gitlab-support/reference.rb"
+          cmd: 'ruby "$(espanso path packages)"/gitlab-support/reference.rb ${ESPANSO_CLIPBOARD}'
+
+  # Format verbose issue/MR/epics links in Markdown (nested triggers from above)
+  - trigger: '["('
+    replace: "[$|$ {{title}} {{refer}}]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+      - name: title
+        type: match
+        params:
+          trigger: '""title'
+      - name: refer
+        type: match
+        params:
+          trigger: '()refer'
+
 
   # Customer comments for issues after internal requests
   #   1. copy internal URL into clipboard

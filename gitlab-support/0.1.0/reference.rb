@@ -30,4 +30,4 @@ class Reference
   end
 end
 
-puts Reference.new(ENV['ESPANSO_CLIPBOARD']).construct
+puts Reference.new(ARGV.first).construct

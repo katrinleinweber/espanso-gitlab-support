@@ -8,6 +8,7 @@ require 'nokogiri'
 require 'httparty'
 require 'pry'
 
+# Obtain title via provided URL
 class Title
   attr_reader :url
 
@@ -29,4 +30,4 @@ class Title
   end
 end
 
-puts Title.new(url = ENV['ESPANSO_CLIPBOARD']).construct
+puts Title.new(ARGV.first).construct
