@@ -16,7 +16,9 @@ class Title
   end
 
   def construct
-    return '' if url.nil? || url.empty?
+    return '' if url.nil? || url.empty? \
+      || url.start_with?('/')
+      # ARGV.first can be set to file's path upon require_relative
 
     page = HTTParty.get(url)
     body = Nokogiri::HTML(page.body)
