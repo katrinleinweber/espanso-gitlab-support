@@ -24,7 +24,7 @@ class Title
     body
       .at_xpath('/html/head/title/text()')
       .text
-      .split(' (')
+      .split(%r{( \([!#%&]| · )})
       .first
   end
 end

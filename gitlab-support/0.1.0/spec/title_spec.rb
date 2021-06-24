@@ -7,7 +7,7 @@ RSpec.describe Title do
     it 'gets title from a GitHub issue' do
       url = 'https://github.com/federico-terzi/espanso/issues/487#issuecomment-858903403'
       expect(Title.new(url).construct)
-        .to eq('[feature] regular expression search and replace support on variables · Issue #487 · federico-terzi/espanso · GitHub')
+        .to eq('[feature] regular expression search and replace support on variables')
     end
 
     it 'gets title from a GitLab issue with comment' do
