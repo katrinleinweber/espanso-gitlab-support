@@ -46,3 +46,9 @@ matches:
     replace : "A large ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
   - trigger : "~lucc"
     replace : "A large ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+
+  - trigger : '[sst'
+    replace : "See [Slack thread]({{clipboard}})\n\n> $|$"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
