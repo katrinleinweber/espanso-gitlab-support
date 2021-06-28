@@ -2,6 +2,13 @@
 
 An experiment in GitLab-shared text expansions/snippets.
 
+## Prerequisites 
+
+The following gems are needed in order to use our (GitLab) expansions:
+```
+sudo gem install httparty nokogiri
+```
+
 ## How to install
 
 Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository),
