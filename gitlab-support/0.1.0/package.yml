@@ -79,3 +79,14 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
+
+  # filenames
+  - trigger: '.gcy'
+    replace: '.gitlab-ci.yml'
+  - trigger: '/eg'
+    replace: '/etc/gitlab/'
+  - trigger: '.grb'
+    replace: 'gitlab.rb'
+  - trigger: '.gsj'
+    replace: 'gitlab-secrets.json'
+
