@@ -20,3 +20,12 @@ reset:
 	espanso install ${PGK} --external  \
 		https://github.com/katrinleinweber/espanso-${PGK}
 	espanso restart
+
+list:
+	grep --color=never --extended-regexp '^\s+- trigger' \
+		--after-context=1 \
+		gitlab-support/**/package.yml \
+	| sed -e 's/^--//g' \
+	| sed -E 's/^ +- trigger:/- trigger:/g' \
+	| sed -e 's/  replace:/- replace:/g' \
+	>> README.md
