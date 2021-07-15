@@ -3,7 +3,7 @@
 An experiment in GitLab-shared text expansions/snippets.
 See also [our discussion in support-team-meta#3539](https://gitlab.com/gitlab-com/support/support-team-meta/-/issues/3539#note_597649648).
 
-## Prerequisites 
+## Prerequisites
 
 The following gems are needed in order to use our (GitLab) expansions:
 ```
