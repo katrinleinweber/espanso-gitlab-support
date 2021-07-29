@@ -24,7 +24,6 @@ matches:
 
 
   # Components of verbose Markdown links, see below
-
   - trigger: '""title'
     replace: "\"{{title}}\""
     vars:
@@ -90,6 +89,6 @@ matches:
   - trigger: '.gsj'
     replace: 'gitlab-secrets.json'
 
-  # https://docs.gitlab.com/omnibus/maintenance/index.html 
+  # https://docs.gitlab.com/omnibus/maintenance/index.html
   - trigger: 'gctl'
     replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'

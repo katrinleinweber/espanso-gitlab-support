@@ -6,7 +6,8 @@ See also [our discussion in support-team-meta#3539](https://gitlab.com/gitlab-co
 ## Prerequisites
 
 The following gems are needed in order to use our (GitLab) expansions:
-```
+
+```shell
 gem install httparty nokogiri
 ```
 
@@ -38,11 +39,67 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 
 ### List of available expansions
 
+- trigger: "sartpom"
+  - replace: 'shortly after reproducing the problem once more.'
+
 - trigger: "[gsos"
-  - replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) shortly after reproducing the problem once more."
+  - replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
 
 - trigger: "[ksos"
-  - replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) shortly after reproducing the problem once more."
+  - replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}"
+
+- trigger: "/stc"
+  - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
+
+- trigger: '""title'
+  - replace: "\"{{title}}\""
+
+- trigger: '()refer'
+  - replace: "({{refer}})"
+
+- trigger: '["('
+  - replace: "[$|$ {{title}} {{refer}}]({{clipboard}})"
+
+- trigger: "~cc"
+  - replace: "A ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+
+- trigger: "~pcc"
+  - replace: "A ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+
+- trigger: "~ucc"
+  - replace: "A ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+
+- trigger: "~lpcc"
+  - replace: "A large ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+
+- trigger: "~lucc"
+  - replace: "A large ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+
+- trigger: '[sst'
+  - replace: "See [Slack thread]({{clipboard}})\n\n> $|$"
+
+- trigger: '.gcy'
+  - replace: '.gitlab-ci.yml'
+
+- trigger: '/eg'
+  - replace: '/etc/gitlab/'
+
+- trigger: '.grb'
+  - replace: 'gitlab.rb'
+
+- trigger: '.gsj'
+  - replace: 'gitlab-secrets.json'
+
+- trigger: 'gctl'
+  - replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'
+- trigger: "sartpom"
+  - replace: 'shortly after reproducing the problem once more.'
+
+- trigger: "[gsos"
+  - replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
+
+- trigger: "[ksos"
+  - replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}"
 
 - trigger: "/stc"
   - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
