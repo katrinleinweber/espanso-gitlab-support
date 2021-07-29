@@ -7,7 +7,7 @@ See also [our discussion in support-team-meta#3539](https://gitlab.com/gitlab-co
 
 The following gems are needed in order to use our (GitLab) expansions:
 ```
-sudo gem install httparty nokogiri
+gem install httparty nokogiri
 ```
 
 ## Installation
