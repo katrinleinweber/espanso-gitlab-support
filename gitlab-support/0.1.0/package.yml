@@ -36,8 +36,8 @@ matches:
 
 
   # Components of verbose Markdown links, see below
-  - trigger: '""title'
-    replace: "\"{{title}}\""
+  - trigger: '/glt'
+    replace: "{{title}}"
     vars:
       - name: "clipboard"
         type: "clipboard"
@@ -45,8 +45,8 @@ matches:
         type: shell
         params:
           cmd: 'ruby "$(espanso path packages)"/gitlab-support/title.rb ${ESPANSO_CLIPBOARD}'
-  - trigger: '()refer'
-    replace: "({{refer}})"
+  - trigger: '/glr'
+    replace: "{{refer}}"
     vars:
       - name: "clipboard"
         type: "clipboard"
@@ -56,19 +56,19 @@ matches:
           cmd: 'ruby "$(espanso path packages)"/gitlab-support/reference.rb ${ESPANSO_CLIPBOARD}'
 
   # Format verbose issue/MR/epics links in Markdown (nested triggers from above)
-  - trigger: '["('
-    replace: "[$|$ {{title}} {{refer}}]({{clipboard}})"
+  - trigger: '[tr)'
+    replace: "[{{title}} ({{refer}})]({{clipboard}})"
     vars:
       - name: "clipboard"
         type: "clipboard"
       - name: title
         type: match
         params:
-          trigger: '""title'
+          trigger: '/glt'
       - name: refer
         type: match
         params:
-          trigger: '()refer'
+          trigger: '/glr'
 
 
   # Customer comments for issues after internal requests
