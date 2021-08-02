@@ -14,13 +14,15 @@ matches:
     replace: 'shortly after reproducing the problem once more.'
   - trigger: "[gsos"
     replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
-    - name: sartpom
+    vars:
+      - name: sartpom
         type: match
         params:
           trigger: 'sartpom'
   - trigger: "[ksos"
     replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}"
-    - name: sartpom
+    vars:
+      - name: sartpom
         type: match
         params:
           trigger: 'sartpom'
