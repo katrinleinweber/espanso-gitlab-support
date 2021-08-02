@@ -10,22 +10,22 @@ global_vars:
 matches:
 
   # GitLabSOS & KubeSOS
-  - trigger: "sartpom"
+  - trigger: '/glsar'
     replace: 'shortly after reproducing the problem once more.'
   - trigger: "[gsos"
-    replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
+    replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}"
     vars:
-      - name: sartpom
+      - name: glsar
         type: match
         params:
-          trigger: 'sartpom'
+          trigger: '/glsar'
   - trigger: "[ksos"
-    replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}"
+    replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{/glsar}}"
     vars:
-      - name: sartpom
+      - name: glsar
         type: match
         params:
-          trigger: 'sartpom'
+          trigger: '/glsar'
 
   # Add Support- & Review Guideline-related quick actions
   # See https://about.gitlab.com/handbook/engineering/ux/technical-writing/#designated-technical-writers,
