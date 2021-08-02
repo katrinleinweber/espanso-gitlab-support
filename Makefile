@@ -1,6 +1,6 @@
 PGK=gitlab-support
 VER=$$(/bin/ls ${PGK} \
-	| sort --human-numeric-sort --reVERe \
+	| sort --human-numeric-sort --reverse \
 	| head -1)
 
 # Test locally, by running RSpec and
