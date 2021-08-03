@@ -104,3 +104,18 @@ matches:
   # https://docs.gitlab.com/omnibus/maintenance/index.html
   - trigger: 'gctl'
     replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'
+
+
+  # Miscellaneous
+
+  - trigger: "(urg"
+    replace: "([using `ripgrep` there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))"
+
+  - trigger: "[Rc"
+    replace: "[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)"
+
+  - trigger: "<ds"
+    replace: "<details><summary>$|$</summary>{{clipboard}}<details>"
+
+  - trigger: ':tfe'
+    replace: ':thread: for emergency :point_up:'
