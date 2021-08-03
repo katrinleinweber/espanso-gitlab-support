@@ -101,6 +101,35 @@ matches:
   - trigger: '.gsj'
     replace: 'gitlab-secrets.json'
 
+  # Omnibus paths
+  #   https://docs.gitlab.com/ee/administration/logs.html
+  #   https://docs.gitlab.com/ee/raketasks/backup_restore.html
+  - trigger: '/vlg'
+    replace: '/var/log/gitlab/'
+  - trigger: '/og'
+    replace: '/opt/gitlab/'
+  - trigger: '/ebg'
+    replace: "{{og}}embedded/bin/git"
+    vars:
+      - name: og
+        type: match
+        params:
+          trigger: '/og'
+  - trigger: '/vog'
+    replace: "/var{{og}}"
+    vars:
+      - name: og
+        type: match
+        params:
+          trigger: '/og'
+  - trigger: '/glb'
+    replace: "{{vog}}backups"
+    vars:
+      - name: vog
+        type: match
+        params:
+          trigger: '/vog'
+
   # https://docs.gitlab.com/omnibus/maintenance/index.html
   - trigger: '/gctl'
     replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'
