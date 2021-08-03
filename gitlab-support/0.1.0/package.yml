@@ -102,8 +102,16 @@ matches:
     replace: 'gitlab-secrets.json'
 
   # https://docs.gitlab.com/omnibus/maintenance/index.html
-  - trigger: 'gctl'
+  - trigger: '/gctl'
     replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'
+  - trigger: '/glcf'
+    replace: 'sudo gitlab-ctl reconfigure'
+  - trigger: '/glst'
+    replace: 'sudo gitlab-ctl status'
+  - trigger: '/glrt'
+    replace: 'sudo gitlab-ctl restart'
+  - trigger: '/glsp'
+    replace: 'sudo gitlab-ctl stop'
 
 
   # Miscellaneous
