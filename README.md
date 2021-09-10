@@ -51,14 +51,9 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 - trigger: "/stc"
   - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
 
-- trigger: '""title'
-  - replace: "\"{{title}}\""
 
-- trigger: '()refer'
-  - replace: "({{refer}})"
 
-- trigger: '["('
-  - replace: "[$|$ {{title}} {{refer}}]({{clipboard}})"
+### List of available expansions
 
 - trigger: "~cc"
   - replace: "A ~customer [internally]({{clipboard}}) is $|$:\n\n> "
@@ -104,14 +99,14 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 - trigger: "/stc"
   - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
 
-- trigger: '""title'
-  - replace: "\"{{title}}\""
+- trigger: '/glt'
+  - replace: "{{title}}"
 
-- trigger: '()refer'
-  - replace: "({{refer}})"
+- trigger: '/glr'
+  - replace: "{{refer}}"
 
-- trigger: '["('
-  - replace: "[$|$ {{title}} {{refer}}]({{clipboard}})"
+- trigger: '[tr)'
+  - replace: "[{{title}} ({{refer}})]({{clipboard}})"
 
 - trigger: "~cc"
   - replace: "A ~customer [internally]({{clipboard}}) is $|$:\n\n> "
