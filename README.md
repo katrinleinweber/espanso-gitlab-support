@@ -39,65 +39,17 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 
 ### List of available expansions
 
-- trigger: "sartpom"
+- trigger: '/glsar'
   - replace: 'shortly after reproducing the problem once more.'
 
 - trigger: "[gsos"
-  - replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
+  - replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}"
 
 - trigger: "[ksos"
-  - replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}"
+  - replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{/glsar}}"
 
 - trigger: "/stc"
-  - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
-
-
-
-### List of available expansions
-
-- trigger: "~cc"
-  - replace: "A ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~pcc"
-  - replace: "A ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~ucc"
-  - replace: "A ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~lpcc"
-  - replace: "A large ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~lucc"
-  - replace: "A large ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: '[sst'
-  - replace: "See [Slack thread]({{clipboard}})\n\n> $|$"
-
-- trigger: '.gcy'
-  - replace: '.gitlab-ci.yml'
-
-- trigger: '/eg'
-  - replace: '/etc/gitlab/'
-
-- trigger: '.grb'
-  - replace: 'gitlab.rb'
-
-- trigger: '.gsj'
-  - replace: 'gitlab-secrets.json'
-
-- trigger: 'gctl'
-  - replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'
-- trigger: "sartpom"
-  - replace: 'shortly after reproducing the problem once more.'
-
-- trigger: "[gsos"
-  - replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
-
-- trigger: "[ksos"
-  - replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}"
-
-- trigger: "/stc"
-  - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @"
+  - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @\n/milestone %14."
 
 - trigger: '/glt'
   - replace: "{{title}}"
@@ -138,5 +90,44 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 - trigger: '.gsj'
   - replace: 'gitlab-secrets.json'
 
-- trigger: 'gctl'
+- trigger: '/vlg'
+  - replace: '/var/log/gitlab/'
+
+- trigger: '/og'
+  - replace: '/opt/gitlab/'
+
+- trigger: '/ebg'
+  - replace: "{{og}}embedded/bin/git"
+
+- trigger: '/vog'
+  - replace: "/var{{og}}"
+
+- trigger: '/glb'
+  - replace: "{{vog}}backups"
+
+- trigger: '/gctl'
   - replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'
+
+- trigger: '/glcf'
+  - replace: 'sudo gitlab-ctl reconfigure'
+
+- trigger: '/glst'
+  - replace: 'sudo gitlab-ctl status'
+
+- trigger: '/glrt'
+  - replace: 'sudo gitlab-ctl restart'
+
+- trigger: '/glsp'
+  - replace: 'sudo gitlab-ctl stop'
+
+- trigger: "(urg"
+  - replace: "([using `ripgrep` there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))"
+
+- trigger: "[Rc"
+  - replace: "[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)"
+
+- trigger: "<ds"
+  - replace: "<details><summary>$|$</summary>{{clipboard}}<details>"
+
+- trigger: ':tfe'
+  - replace: ':thread: for emergency :point_up:'
