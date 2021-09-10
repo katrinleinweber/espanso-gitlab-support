@@ -22,6 +22,7 @@ reset:
 	espanso restart
 
 list:
+	echo '```plaintext' >> README.md
 	grep --color=never --extended-regexp '^\s+- trigger' \
 		--after-context=1 \
 		gitlab-support/**/package.yml \
@@ -29,3 +30,5 @@ list:
 	| sed -E 's/^ +- trigger:/- trigger:/g' \
 	| sed -e 's/  replace:/- replace:/g' \
 	>> README.md
+	echo '```' >> README.md
+

@@ -39,6 +39,7 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 
 ### List of available expansions
 
+```plaintext
 - trigger: '/glsar'
   - replace: 'shortly after reproducing the problem once more.'
 
@@ -131,3 +132,4 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 
 - trigger: ':tfe'
   - replace: ':thread: for emergency :point_up:'
+```
