@@ -19,4 +19,4 @@ pre-commit:
           && bundle audit
     verify:
       glob: '**/*.rb'
-      run : 'bundle exec rspec'
+      run : 'cd gitlab-support/0.1.0 && bundle exec rspec'
