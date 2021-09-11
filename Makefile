@@ -7,9 +7,8 @@ FIN=README.md
 
 # Test locally, by running RSpec and
 # copying latest yml to local package install
-test:
+inject:
 	cd ${PGK}/${VER} \
-		&& bundle exec rspec \
 		&& cp -f \
 			*.rb \
 			package.yml \

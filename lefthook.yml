@@ -1,0 +1,11 @@
+pre-commit:
+  commands:
+    append:
+      glob: '**/package.yml'
+      run : 'make tabulate'
+    inject:
+      glob: '**/package.yml'
+      run : 'make inject'
+    verify:
+      glob: '**/*.rb'
+      run : 'bundle exec rspec'
