@@ -47,7 +47,7 @@ Appending the up-to-date list of triggers and espansions requires:
 - [Shruggie](https://hub.espanso.org/packages/shruggie/)
 - [What the Commit](https://hub.espanso.org/packages/wtc/)
 
-### # List of included espansions
+## List of included espansions
 
 Trigger | Espansion
 ------- | ---------
