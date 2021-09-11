@@ -34,6 +34,7 @@ tabulate:
 	| perl -p -e 's/\`//g' \
 	| awk '{print "`"$$0}' \
 	| awk '{print $$0"`"}' \
+	| perl -p -e 's/\|/\\|/g' \
 	| perl -p -e 's/\t/` | `/g' \
 	>> ${TMP}
 	mv -f ${TMP} ${FIN}

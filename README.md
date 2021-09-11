@@ -58,12 +58,12 @@ Trigger | Espansion
 `/glt` | `{{title}}`
 `/glr` | `{{refer}}`
 `[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
-`~cc` | `A ~customer [internally]({{clipboard}}) is $|$:\n\n> `
-`~pcc` | `A ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
-`~ucc` | `A ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
-`~lpcc` | `A large ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
-`~lucc` | `A large ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
-`[sst` | `See [Slack thread]({{clipboard}})\n\n> $|$`
+`~cc` | `A ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~pcc` | `A ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~ucc` | `A ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~lpcc` | `A large ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~lucc` | `A large ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`[sst` | `See [Slack thread]({{clipboard}})\n\n> $\|$`
 `.gcy` | `.gitlab-ci.yml`
 `/eg` | `/etc/gitlab/`
 `.grb` | `gitlab.rb`
@@ -73,12 +73,12 @@ Trigger | Espansion
 `/ebg` | `{{og}}embedded/bin/git`
 `/vog` | `/var{{og}}`
 `/glb` | `{{vog}}backups`
-`/gctl` | `sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt`
+`/gctl` | `sudo gitlab-ctl tail \| tee /tmp/gl-{{clipboard}}-$\|$.txt`
 `/glcf` | `sudo gitlab-ctl reconfigure`
 `/glst` | `sudo gitlab-ctl status`
 `/glrt` | `sudo gitlab-ctl restart`
 `/glsp` | `sudo gitlab-ctl stop`
 `(urg` | `([using ripgrep there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))`
 `[Rc` | `[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)`
-`<ds` | `<details><summary>$|$</summary>{{clipboard}}<details>`
+`<ds` | `<details><summary>$\|$</summary>{{clipboard}}<details>`
 `:tfe` | `:thread: for emergency :point_up:`
