@@ -20,7 +20,7 @@ matches:
         params:
           trigger: '/glsar'
   - trigger: "[ksos"
-    replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{/glsar}}"
+    replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}"
     vars:
       - name: glsar
         type: match
