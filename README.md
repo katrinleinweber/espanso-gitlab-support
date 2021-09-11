@@ -30,6 +30,16 @@ Please review the list of triggers and replacement in [the `package.yml` file](g
 
 MRs are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
+### Development dependencies
+
+Appending the up-to-date list of triggers and espansions requires:
+
+- awk
+- jq
+- Make
+- perl
+- yq
+
 ## Other useful/noteworthy Espanso packages
 
 - @katrinleinweber's [effective-markdown](https://github.com/katrinleinweber/espanso-effective-markdown) & [greetings-english](https://github.com/katrinleinweber/espanso-greetings-english)
@@ -37,99 +47,38 @@ MRs are welcome! For major changes, please open an issue first to discuss what y
 - [Shruggie](https://hub.espanso.org/packages/shruggie/)
 - [What the Commit](https://hub.espanso.org/packages/wtc/)
 
-### List of available expansions
+### # List of included espansions
 
-```plaintext
-- trigger: '/glsar'
-  - replace: 'shortly after reproducing the problem once more.'
-
-- trigger: "[gsos"
-  - replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}"
-
-- trigger: "[ksos"
-  - replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{/glsar}}"
-
-- trigger: "/stc"
-  - replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer @\n/milestone %14."
-
-- trigger: '/glt'
-  - replace: "{{title}}"
-
-- trigger: '/glr'
-  - replace: "{{refer}}"
-
-- trigger: '[tr)'
-  - replace: "[{{title}} ({{refer}})]({{clipboard}})"
-
-- trigger: "~cc"
-  - replace: "A ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~pcc"
-  - replace: "A ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~ucc"
-  - replace: "A ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~lpcc"
-  - replace: "A large ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: "~lucc"
-  - replace: "A large ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
-
-- trigger: '[sst'
-  - replace: "See [Slack thread]({{clipboard}})\n\n> $|$"
-
-- trigger: '.gcy'
-  - replace: '.gitlab-ci.yml'
-
-- trigger: '/eg'
-  - replace: '/etc/gitlab/'
-
-- trigger: '.grb'
-  - replace: 'gitlab.rb'
-
-- trigger: '.gsj'
-  - replace: 'gitlab-secrets.json'
-
-- trigger: '/vlg'
-  - replace: '/var/log/gitlab/'
-
-- trigger: '/og'
-  - replace: '/opt/gitlab/'
-
-- trigger: '/ebg'
-  - replace: "{{og}}embedded/bin/git"
-
-- trigger: '/vog'
-  - replace: "/var{{og}}"
-
-- trigger: '/glb'
-  - replace: "{{vog}}backups"
-
-- trigger: '/gctl'
-  - replace: 'sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt'
-
-- trigger: '/glcf'
-  - replace: 'sudo gitlab-ctl reconfigure'
-
-- trigger: '/glst'
-  - replace: 'sudo gitlab-ctl status'
-
-- trigger: '/glrt'
-  - replace: 'sudo gitlab-ctl restart'
-
-- trigger: '/glsp'
-  - replace: 'sudo gitlab-ctl stop'
-
-- trigger: "(urg"
-  - replace: "([using `ripgrep` there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))"
-
-- trigger: "[Rc"
-  - replace: "[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)"
-
-- trigger: "<ds"
-  - replace: "<details><summary>$|$</summary>{{clipboard}}<details>"
-
-- trigger: ':tfe'
-  - replace: ':thread: for emergency :point_up:'
-```
+Trigger | Espansion
+------- | ---------
+`/glsar` | `shortly after reproducing the problem once more.`
+`[gsos` | `[our GitLabSOS tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}`
+`[ksos` | `[our KubeSOS tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{/glsar}}`
+`/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer @\n/milestone %14.`
+`/glt` | `{{title}}`
+`/glr` | `{{refer}}`
+`[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
+`~cc` | `A ~customer [internally]({{clipboard}}) is $|$:\n\n> `
+`~pcc` | `A ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
+`~ucc` | `A ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
+`~lpcc` | `A large ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
+`~lucc` | `A large ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $|$:\n\n> `
+`[sst` | `See [Slack thread]({{clipboard}})\n\n> $|$`
+`.gcy` | `.gitlab-ci.yml`
+`/eg` | `/etc/gitlab/`
+`.grb` | `gitlab.rb`
+`.gsj` | `gitlab-secrets.json`
+`/vlg` | `/var/log/gitlab/`
+`/og` | `/opt/gitlab/`
+`/ebg` | `{{og}}embedded/bin/git`
+`/vog` | `/var{{og}}`
+`/glb` | `{{vog}}backups`
+`/gctl` | `sudo gitlab-ctl tail | tee /tmp/gl-{{clipboard}}-$|$.txt`
+`/glcf` | `sudo gitlab-ctl reconfigure`
+`/glst` | `sudo gitlab-ctl status`
+`/glrt` | `sudo gitlab-ctl restart`
+`/glsp` | `sudo gitlab-ctl stop`
+`(urg` | `([using ripgrep there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))`
+`[Rc` | `[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)`
+`<ds` | `<details><summary>$|$</summary>{{clipboard}}<details>`
+`:tfe` | `:thread: for emergency :point_up:`

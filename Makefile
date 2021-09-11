@@ -2,6 +2,8 @@ PGK=gitlab-support
 VER=$$(/bin/ls ${PGK} \
 	| sort --human-numeric-sort --reverse \
 	| head -1)
+TMP=RM.md
+FIN=README.md
 
 # Test locally, by running RSpec and
 # copying latest yml to local package install
@@ -21,14 +23,18 @@ reset:
 		https://github.com/katrinleinweber/espanso-${PGK}
 	espanso restart
 
-list:
-	echo '```plaintext' >> README.md
-	grep --color=never --extended-regexp '^\s+- trigger' \
-		--after-context=1 \
+# Convert YML to Markdown table & append to README
+tabulate:
+	rg --no-line-number --before-context=99 '# List of included espansions' ${FIN} > ${TMP}
+	echo '\nTrigger | Espansion' >> ${TMP}
+	echo '------- | ---------' >> ${TMP}
+	yq eval '.matches' -o=json \
 		gitlab-support/**/package.yml \
-	| sed -e 's/^--//g' \
-	| sed -E 's/^ +- trigger:/- trigger:/g' \
-	| sed -e 's/  replace:/- replace:/g' \
-	>> README.md
-	echo '```' >> README.md
-
+	| jq -r '.[] | [.trigger, .replace]' \
+	| jq -r '@tsv' \
+	| perl -p -e 's/\`//g' \
+	| awk '{print "`"$$0}' \
+	| awk '{print $$0"`"}' \
+	| perl -p -e 's/\t/` | `/g' \
+	>> ${TMP}
+	mv -f ${TMP} ${FIN}
