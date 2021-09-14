@@ -75,15 +75,15 @@ matches:
   #   1. copy internal URL into clipboard
   #   2. summarize / partial-quote if necessary/useful
   - trigger: "~cc"
-    replace: "A ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+    replace: "A customer [internally]({{clipboard}}) is $|$:\n\n> "
   - trigger: "~pcc"
-    replace: "A ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+    replace: "A ~\"GitLab Premium\" customer [internally]({{clipboard}}) is $|$:\n\n> "
   - trigger: "~ucc"
-    replace: "A ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+    replace: "A ~\"GitLab Ultimate\" customer [internally]({{clipboard}}) is $|$:\n\n> "
   - trigger: "~lpcc"
-    replace: "A large ~\"GitLab Premium\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+    replace: "A large ~\"GitLab Premium\" customer [internally]({{clipboard}}) is $|$:\n\n> "
   - trigger: "~lucc"
-    replace: "A large ~\"GitLab Ultimate\" ~customer [internally]({{clipboard}}) is $|$:\n\n> "
+    replace: "A large ~\"GitLab Ultimate\" customer [internally]({{clipboard}}) is $|$:\n\n> "
 
   - trigger: '[sst'
     replace: "See [Slack thread]({{clipboard}})\n\n> $|$"

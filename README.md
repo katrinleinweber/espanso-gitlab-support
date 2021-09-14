@@ -58,11 +58,11 @@ Trigger | Espansion
 `/glt` | `{{title}}`
 `/glr` | `{{refer}}`
 `[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
-`~cc` | `A ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~pcc` | `A ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~ucc` | `A ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~lpcc` | `A large ~"GitLab Premium" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~lucc` | `A large ~"GitLab Ultimate" ~customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~cc` | `A customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~pcc` | `A ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~ucc` | `A ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~lpcc` | `A large ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n> `
+`~lucc` | `A large ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n> `
 `[sst` | `See [Slack thread]({{clipboard}})\n\n> $\|$`
 `.gcy` | `.gitlab-ci.yml`
 `/eg` | `/etc/gitlab/`
