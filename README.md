@@ -80,5 +80,5 @@ Trigger | Espansion
 `/glsp` | `sudo gitlab-ctl stop`
 `(urg` | `([using ripgrep there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))`
 `[Rc` | `[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)`
-`<ds` | `<details><summary>$\|$</summary>{{clipboard}}<details>`
+`<ds` | `<details><summary>$\|$</summary>{{clipboard}}</details>`
 `:tfe` | `:thread: for emergency :point_up:`

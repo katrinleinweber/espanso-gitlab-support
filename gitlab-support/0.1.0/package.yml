@@ -152,7 +152,7 @@ matches:
     replace: "[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)"
 
   - trigger: "<ds"
-    replace: "<details><summary>$|$</summary>{{clipboard}}<details>"
+    replace: "<details><summary>$|$</summary>{{clipboard}}</details>"
 
   - trigger: ':tfe'
     replace: ':thread: for emergency :point_up:'
