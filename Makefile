@@ -8,11 +8,9 @@ FIN=README.md
 # Test locally, by running RSpec and
 # copying latest yml to local package install
 inject:
-	cd ${PGK}/${VER} \
-		&& cp -f \
-			*.rb \
-			package.yml \
-			"$$(espanso path packages)/${PGK}/"
+	cp  ${PGK}/${VER}/*.rb \
+		${PGK}/${VER}/package.yml \
+		"$$(espanso path packages)/${PGK}/"
 	espanso restart
 
 # Reinstall from public master
