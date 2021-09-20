@@ -69,6 +69,28 @@ matches:
         type: match
         params:
           trigger: '/glr'
+  - trigger: '[rt)'
+    replace: "[{{refer}} ({{title}})]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+      - name: title
+        type: match
+        params:
+          trigger: '/glt'
+      - name: refer
+        type: match
+        params:
+          trigger: '/glr'
+  - trigger: '[r)'
+    replace: "[{{refer}}]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+      - name: refer
+        type: match
+        params:
+          trigger: '/glr'
 
 
   # Customer comments for issues after internal requests

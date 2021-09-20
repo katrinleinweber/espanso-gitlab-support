@@ -58,6 +58,8 @@ Trigger | Espansion
 `/glt` | `{{title}}`
 `/glr` | `{{refer}}`
 `[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
+`[rt)` | `[{{refer}} ({{title}})]({{clipboard}})`
+`[r)` | `[{{refer}}]({{clipboard}})`
 `~cc` | `A customer [internally]({{clipboard}}) is $\|$:\n\n> `
 `~pcc` | `A ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n> `
 `~ucc` | `A ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n> `
