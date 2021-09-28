@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bundler-audit (0.9.0.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     diff-lcs (1.4.4)
     httparty (0.18.1)
       mime-types (~> 3.0)
@@ -9,9 +12,9 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0901)
     multi_xml (0.6.0)
-    nokogiri (1.12.4-x86_64-darwin)
+    nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.12.4-x86_64-linux)
+    nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     racc (1.5.2)
     rspec (3.10.0)
@@ -27,12 +30,15 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    thor (1.1.0)
 
 PLATFORMS
   x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
+  bundler (~> 2.2)
+  bundler-audit (~> 0.9.0)
   httparty (~> 0.18.1)
   nokogiri (~> 1.11)
   rspec (~> 3.10)
