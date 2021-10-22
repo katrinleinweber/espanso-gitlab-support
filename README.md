@@ -80,6 +80,7 @@ Trigger | Espansion
 `/glst` | `sudo gitlab-ctl status`
 `/glrt` | `sudo gitlab-ctl restart`
 `/glsp` | `sudo gitlab-ctl stop`
+`&sde` | `shutdown && exit`
 `(urg` | `([using ripgrep there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))`
 `[Rc` | `[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)`
 `<ds` | `<details><summary>$\|$</summary>{{clipboard}}</details>`
