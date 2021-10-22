@@ -81,7 +81,7 @@ Trigger | Espansion
 `/glrt` | `sudo gitlab-ctl restart`
 `/glsp` | `sudo gitlab-ctl stop`
 `&sde` | `shutdown && exit`
-`/glsri` | `# Support-Resource initialization with a minimal configuration,\n# pinned version & some useful configs\nGRB=/etc/gitlab/gitlab.rb\n\n# Block Gravatar\nsudo echo '127.0.0.1 gravatar.com' >> /etc/hosts\n\n# Clear config file & insert a few useful items\nsudo sed \\\n    -e 's/#.*$//;/^$/d' \\\n    --in-place=.ori \\\n    $GRB && \\\necho "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \\\necho "logging['logrotate_frequency'] = nil" >> $GRB && \\\necho "logging['logrotate_size'] = '5G'" >> $GRB && \\\nsudo gitlab-ctl reconfigure\n\napt install --yes ripgrep jq\n`
+`/glsri` | `# Support-Resource initialization with a minimal configuration,\n# pinned version & some useful configs\nGRB=/etc/gitlab/gitlab.rb\n\n# Block Gravatar\nsudo echo '127.0.0.1 gravatar.com' >> /etc/hosts\n\n# Clear config file & insert a few useful items\nsudo sed \\\n    -e 's/#.*$//;/^$/d' \\\n    --in-place=.ori \\\n    $GRB && \\\necho "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \\\necho "logging['logrotate_frequency'] = nil" >> $GRB && \\\necho "logging['logrotate_size'] = '5G'" >> $GRB && \\\nsudo gitlab-ctl reconfigure\n\napt install --yes ripgrep jq\n\nsudo apt-mark hold {*g,g}itlab* && \\\nsudo apt --yes upgrade\nsudo reboot\n`
 `(urg` | `([using ripgrep there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))`
 `[Rc` | `[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)`
 `<ds` | `<details><summary>$\|$</summary>{{clipboard}}</details>`

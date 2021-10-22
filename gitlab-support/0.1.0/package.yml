@@ -188,6 +188,10 @@ matches:
 
       apt install --yes ripgrep jq
 
+      sudo apt-mark hold {*g,g}itlab* && \
+      sudo apt --yes upgrade
+      sudo reboot
+
 
   # Miscellaneous
 
