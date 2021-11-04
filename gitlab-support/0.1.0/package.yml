@@ -13,14 +13,14 @@ matches:
   - trigger: '/glsar'
     replace: 'shortly after reproducing the problem once more.'
   - trigger: "[gsos"
-    replace: "[our `GitLabSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}"
+    replace: "[run our `GitLabSOS` script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}"
     vars:
       - name: glsar
         type: match
         params:
           trigger: '/glsar'
   - trigger: "[ksos"
-    replace: "[our `KubeSOS` tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}"
+    replace: "[run our `KubeSOS` script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}"
     vars:
       - name: glsar
         type: match
