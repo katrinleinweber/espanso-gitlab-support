@@ -56,7 +56,7 @@ Trigger | Espansion
 `[ksos` | `[our KubeSOS tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}`
 `/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer @\n/milestone %14.`
 `/glt` | `{{title}}`
-`/glr` | `{{refer}}`
+`/glref` | `{{refer}}`
 `[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
 `[rt)` | `[{{refer}} ({{title}})]({{clipboard}})`
 `[r)` | `[{{refer}}]({{clipboard}})`
