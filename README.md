@@ -52,8 +52,8 @@ Appending the up-to-date list of triggers and espansions requires:
 Trigger | Espansion
 ------- | ---------
 `/glsar` | `shortly after reproducing the problem once more.`
-`[gsos` | `[our GitLabSOS tool](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}`
-`[ksos` | `[our KubeSOS tool](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}`
+`[gsos` | `[run our GitLabSOS script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}`
+`[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}`
 `/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer @\n/milestone %14.`
 `/glt` | `{{title}}`
 `/glr` | `{{refer}}`
