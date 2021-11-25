@@ -204,5 +204,13 @@ matches:
   - trigger: "<ds"
     replace: "<details><summary>$|$</summary>{{clipboard}}</details>"
 
+  - trigger: ':glspair'
+    replace: ':pair: :support-tanuki: $|${{refer}}'
+    vars:
+      - name: refer
+        type: match
+        params:
+          trigger: '/glref'
+
   - trigger: ':tfe'
     replace: ':thread: for emergency :point_up:'
