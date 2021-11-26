@@ -30,15 +30,18 @@ Please review the list of triggers and replacement in [the `package.yml` file](g
 
 MRs are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
+[Install and activate lefthook](https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md#installation)
+to benefit from the `pre-commit` automations.
+
 ### Development dependencies
 
-Appending the up-to-date list of triggers and espansions requires:
+Appending the up-to-date table of triggers and espansions requires:
+Make, perl, awk,
+[jq](https://stedolan.github.io/jq/), and
+[yq](https://mikefarah.gitbook.io/yq/).
 
-- awk
-- jq
-- Make
-- perl
-- yq
+If you don't want to install all those, you can
+[skip the (left)hooks](https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md#skip-lefthook-execution).
 
 ## Other useful/noteworthy Espanso packages
 
