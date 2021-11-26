@@ -202,6 +202,9 @@ matches:
 
   # Miscellaneous
 
+  - trigger: "*(Q"
+    replace: "**(Q$|$)**"
+
   - trigger: "(urg"
     replace: "([using `ripgrep` there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))"
 
