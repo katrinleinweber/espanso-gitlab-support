@@ -74,7 +74,7 @@ Trigger | Espansion
 `/og` | `/opt/gitlab/`
 `/ebg` | `{{og}}embedded/bin/git`
 `/vog` | `/var{{og}}`
-`/glb` | `{{vog}}backups`
+`/vob` | `{{vog}}backups`
 `/gctl` | `sudo gitlab-ctl tail \| tee /tmp/gl-{{clipboard}}-$\|$.txt`
 `/glcf` | `sudo gitlab-ctl reconfigure`
 `/glst` | `sudo gitlab-ctl status`

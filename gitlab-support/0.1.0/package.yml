@@ -144,7 +144,7 @@ matches:
         type: match
         params:
           trigger: '/og'
-  - trigger: '/glb'
+  - trigger: '/vob'
     replace: "{{vog}}backups"
     vars:
       - name: vog
