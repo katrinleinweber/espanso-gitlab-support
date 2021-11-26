@@ -151,6 +151,13 @@ matches:
         type: match
         params:
           trigger: '/vog'
+  - trigger: '/vodr'
+    replace: "{{vog}}git-data/repositories/{{clipboard}}"
+    vars:
+      - name: vog
+        type: match
+        params:
+          trigger: '/vog'
 
   # https://docs.gitlab.com/omnibus/maintenance/index.html
   - trigger: '/gctl'
