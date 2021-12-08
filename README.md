@@ -59,7 +59,7 @@ Trigger | Espansion
 `[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}`
 `/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer @\n/milestone %14.`
 `/glt` | `{{title}}`
-`/glr` | `{{refer}}`
+`/glref` | `{{refer}}`
 `[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
 `[rt)` | `[{{refer}} ({{title}})]({{clipboard}})`
 `[r)` | `[{{refer}}]({{clipboard}})`
@@ -90,4 +90,5 @@ Trigger | Espansion
 `(urg` | `([using ripgrep there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))`
 `[Rc` | `[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)`
 `<ds` | `<details><summary>$\|$</summary>{{clipboard}}</details>`
+`:glspair` | `:pair: :support-tanuki: $\|${{refer}}`
 `:tfe` | `:thread: for emergency :point_up:`

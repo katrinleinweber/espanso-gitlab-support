@@ -45,7 +45,7 @@ matches:
         type: shell
         params:
           cmd: 'ruby "$(espanso path packages)"/gitlab-support/title.rb ${ESPANSO_CLIPBOARD}'
-  - trigger: '/glr'
+  - trigger: '/glref'
     replace: "{{refer}}"
     vars:
       - name: "clipboard"
@@ -68,7 +68,7 @@ matches:
       - name: refer
         type: match
         params:
-          trigger: '/glr'
+          trigger: '/glref'
   - trigger: '[rt)'
     replace: "[{{refer}} ({{title}})]({{clipboard}})"
     vars:
@@ -81,7 +81,7 @@ matches:
       - name: refer
         type: match
         params:
-          trigger: '/glr'
+          trigger: '/glref'
   - trigger: '[r)'
     replace: "[{{refer}}]({{clipboard}})"
     vars:
@@ -90,7 +90,7 @@ matches:
       - name: refer
         type: match
         params:
-          trigger: '/glr'
+          trigger: '/glref'
 
 
   # Customer comments for issues after internal requests
@@ -213,6 +213,14 @@ matches:
 
   - trigger: "<ds"
     replace: "<details><summary>$|$</summary>{{clipboard}}</details>"
+
+  - trigger: ':glspair'
+    replace: ':pair: :support-tanuki: $|${{refer}}'
+    vars:
+      - name: refer
+        type: match
+        params:
+          trigger: '/glref'
 
   - trigger: ':tfe'
     replace: ':thread: for emergency :point_up:'
