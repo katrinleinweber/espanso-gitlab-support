@@ -57,7 +57,7 @@ Trigger | Espansion
 `/glsar` | `shortly after reproducing the problem once more.`
 `[gsos` | `[run our GitLabSOS script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}`
 `[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}`
-`/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer @\n/milestone %14.`
+`/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer \n/milestone %14.`
 `/glt` | `{{title}}`
 `/glref` | `{{refer}}`
 `[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
