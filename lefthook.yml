@@ -10,6 +10,12 @@ pre-commit:
     inject:
       glob: '**/package.yml'
       run : 'make inject'
+    verify:
+      glob: '**/*.rb'
+      run : 'cd gitlab-support/0.1.0 && bundle exec rspec'
+
+pre-push:
+  commands:
     bundle:
       glob: '**/Gemfile*'
       run : >-
@@ -17,6 +23,3 @@ pre-commit:
           && bundle update \
           && bundle install \
           && bundle audit
-    verify:
-      glob: '**/*.rb'
-      run : 'bundle exec rspec'
