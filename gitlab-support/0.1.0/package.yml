@@ -9,7 +9,7 @@ global_vars:
 
 matches:
 
-  # GitLabSOS & KubeSOS
+  # Log-relevant tools: GitLabSOS, KubeSOS & fast-stats
   - trigger: '/glsar'
     replace: 'shortly after reproducing the problem once more.'
   - trigger: "[gsos"
@@ -26,6 +26,8 @@ matches:
         type: match
         params:
           trigger: '/glsar'
+  - trigger: '[gfs'
+    replace: '[run `fast-stats $|$`](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))'
 
   # Add Support- & Review Guideline-related quick actions
   # See https://about.gitlab.com/handbook/engineering/ux/technical-writing/#designated-technical-writers,
