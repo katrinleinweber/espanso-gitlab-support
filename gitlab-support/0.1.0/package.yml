@@ -216,6 +216,9 @@ matches:
   - trigger: "<ds"
     replace: "<details><summary>$|$</summary>{{clipboard}}</details>"
 
+
+  # Slack messages
+
   - trigger: ':glspair'
     replace: ':pair: :support-tanuki: $|${{refer}}'
     vars:
@@ -223,6 +226,9 @@ matches:
         type: match
         params:
           trigger: '/glref'
+
+  - trigger: ':tfcc'
+    replace: ':thread: for customer call about :zendesk: . cc @'
 
   - trigger: ':tfe'
     replace: ':thread: for emergency :point_up:'
