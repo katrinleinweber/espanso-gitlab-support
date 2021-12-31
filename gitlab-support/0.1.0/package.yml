@@ -35,6 +35,11 @@ matches:
   # and https://about.gitlab.com/handbook/support/engineering/#support-team-contributions
   - trigger: "/stc"
     replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer \n/milestone %14."
+  - trigger: '/ber'
+    replace: "bundle exec rspec {{clipboard}}\n"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
 
 
   # Components of verbose Markdown links, see below

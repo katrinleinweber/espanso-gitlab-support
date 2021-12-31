@@ -59,6 +59,7 @@ Trigger | Espansion
 `[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}`
 `[gfs` | `[run fast-stats $\|$](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))`
 `/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer \n/milestone %14.`
+`/ber` | `bundle exec rspec {{clipboard}}\n`
 `/glt` | `{{title}}`
 `/glref` | `{{refer}}`
 `[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
