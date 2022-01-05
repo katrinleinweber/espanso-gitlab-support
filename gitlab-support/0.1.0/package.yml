@@ -221,6 +221,8 @@ matches:
   - trigger: "<ds"
     replace: "<details><summary>$|$</summary>{{clipboard}}</details>"
 
+  - trigger: "c-a-b:"
+    replace: "Co-authored-by: $|$ <@gitlab.com>"
 
   # Slack messages
 
