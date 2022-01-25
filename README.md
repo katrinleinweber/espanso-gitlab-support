@@ -77,7 +77,7 @@ Trigger | Espansion
 `.gsj` | `gitlab-secrets.json`
 `/vlg` | `/var/log/gitlab/`
 `/og` | `/opt/gitlab/`
-`/ebg` | `{{og}}embedded/bin/git`
+`/ebg` | `sudo -u git {{og}}embedded/bin/git`
 `/vog` | `/var{{og}}`
 `/vob` | `{{vog}}backups`
 `/vodr` | `{{vog}}git-data/repositories/{{clipboard}}`

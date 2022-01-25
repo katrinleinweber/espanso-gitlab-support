@@ -138,7 +138,7 @@ matches:
   - trigger: '/og'
     replace: '/opt/gitlab/'
   - trigger: '/ebg'
-    replace: "{{og}}embedded/bin/git"
+    replace: "sudo -u git {{og}}embedded/bin/git"
     vars:
       - name: og
         type: match
