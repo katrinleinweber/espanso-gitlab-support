@@ -29,6 +29,9 @@ matches:
   - trigger: '[gfs'
     replace: '[run `fast-stats $|$`](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))'
 
+  - trigger: '[gsz'
+    replace: '[run `git-sizer`](https://github.com/github/git-sizer#getting-started) in the affected repository folder.'
+
   # Add Support- & Review Guideline-related quick actions
   # See https://about.gitlab.com/handbook/engineering/ux/technical-writing/#designated-technical-writers,
   # https://docs.gitlab.com/ee/development/code_review.html#dogfooding-the-reviewers-feature,
