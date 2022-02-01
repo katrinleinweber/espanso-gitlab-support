@@ -14,6 +14,9 @@ matches:
   - trigger: '/sartpom'
     replace: 'shortly after reproducing the problem once more.'
 
+  - trigger: '/itarf'
+    replace: 'in the affected repository folder (which needs to be a full, up-to-date clone)'
+
   - trigger: "[gsos"
     replace: "[run our `GitLabSOS` script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
     vars:
@@ -34,7 +37,10 @@ matches:
     replace: '[run `fast-stats $|$`](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))'
 
   - trigger: '[gsz'
-    replace: '[run `git-sizer`](https://github.com/github/git-sizer#getting-started) in the affected repository folder.'
+    replace: '[run `git-sizer`](https://github.com/github/git-sizer#getting-started) {{itarf}}'
+
+  - trigger: '[gfr'
+    replace: '[run `git filter-repo --analyze`](https://github.com/newren/git-filter-repo/#how-do-i-install-it) {{itarf}}'
 
   # Add Support- & Review Guideline-related quick actions
   # See https://about.gitlab.com/handbook/engineering/ux/technical-writing/#designated-technical-writers,
