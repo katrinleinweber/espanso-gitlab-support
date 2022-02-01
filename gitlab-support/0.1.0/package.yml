@@ -226,6 +226,7 @@ matches:
 
   - trigger: "c-a-b:"
     replace: "Co-authored-by: $|$ <@gitlab.com>"
+    # Alternative: https://github.com/tj/git-extras/blob/master/Commands.md#git-coauthor
 
   # Slack messages
 
