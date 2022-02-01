@@ -54,9 +54,9 @@ If you don't want to install all those, you can
 
 Trigger | Espansion
 ------- | ---------
-`/glsar` | `shortly after reproducing the problem once more.`
-`[gsos` | `[run our GitLabSOS script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}`
-`[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}`
+`/sartpom` | `shortly after reproducing the problem once more.`
+`[gsos` | `[run our GitLabSOS script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}`
+`[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}`
 `[gfs` | `[run fast-stats $\|$](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))`
 `[gsz` | `[run git-sizer](https://github.com/github/git-sizer#getting-started) in the affected repository folder.`
 `/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer \n/milestone %14.`

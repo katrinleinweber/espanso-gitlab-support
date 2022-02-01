@@ -9,23 +9,27 @@ global_vars:
 
 matches:
 
-  # Log-relevant tools: GitLabSOS, KubeSOS & fast-stats
-  - trigger: '/glsar'
+  # Relevant helper tools
+
+  - trigger: '/sartpom'
     replace: 'shortly after reproducing the problem once more.'
+
   - trigger: "[gsos"
-    replace: "[run our `GitLabSOS` script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{glsar}}"
+    replace: "[run our `GitLabSOS` script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}"
     vars:
-      - name: glsar
+      - name: sartpom
         type: match
         params:
-          trigger: '/glsar'
+          trigger: '/sartpom'
+
   - trigger: "[ksos"
-    replace: "[run our `KubeSOS` script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{glsar}}"
+    replace: "[run our `KubeSOS` script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}"
     vars:
-      - name: glsar
+      - name: sartpom
         type: match
         params:
-          trigger: '/glsar'
+          trigger: '/sartpom'
+
   - trigger: '[gfs'
     replace: '[run `fast-stats $|$`](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))'
 
