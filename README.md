@@ -55,7 +55,7 @@ If you don't want to install all those, you can
 Trigger | Espansion
 ------- | ---------
 `/sartpom` | `shortly after reproducing the problem once more.`
-`/itarf` | `in the affected repository folder.`
+`/itarf` | `in the affected repository folder (which needs to be a full, up-to-date clone)`
 `[gsos` | `[run our GitLabSOS script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}`
 `[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}`
 `[gfs` | `[run fast-stats $\|$](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))`
