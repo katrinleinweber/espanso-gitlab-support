@@ -54,48 +54,48 @@ If you don't want to install all those, you can
 
 Trigger | Espansion
 ------- | ---------
-`/sartpom` | `shortly after reproducing the problem once more.`
-`/itarf` | `in the affected repository folder (which needs to be a full, up-to-date clone)`
-`[gsos` | `[run our GitLabSOS script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}}`
-`[ksos` | `[run our KubeSOS script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}}`
-`[gfs` | `[run fast-stats $\|$](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases))`
-`[gsz` | `[run git-sizer](https://github.com/github/git-sizer#getting-started) {{itarf}}`
-`[gfr` | `[run git filter-repo --analyze](https://github.com/newren/git-filter-repo/#how-do-i-install-it) {{itarf}}`
-`/stc` | `/label ~"Support Team Contributions"\n/assign me\n/assign_reviewer \n/milestone %14.`
-`/ber` | `bundle exec rspec {{clipboard}}\n`
-`/glt` | `{{title}}`
-`/glref` | `{{refer}}`
-`[tr)` | `[{{title}} ({{refer}})]({{clipboard}})`
-`[rt)` | `[{{refer}} ({{title}})]({{clipboard}})`
-`[r)` | `[{{refer}}]({{clipboard}})`
-`~cc` | `A customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~pcc` | `A ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~ucc` | `A ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~lpcc` | `A large ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`~lucc` | `A large ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n> `
-`[sst` | `See [Slack thread]({{clipboard}})\n\n> $\|$`
-`.gcy` | `.gitlab-ci.yml`
-`/eg` | `/etc/gitlab/`
-`.grb` | `gitlab.rb`
-`.gsj` | `gitlab-secrets.json`
-`/vlg` | `/var/log/gitlab/`
-`/og` | `/opt/gitlab/`
-`/ebg` | `sudo -u git {{og}}embedded/bin/git`
-`/vog` | `/var{{og}}`
-`/vob` | `{{vog}}backups`
-`/vodr` | `{{vog}}git-data/repositories/{{clipboard}}`
-`/gctl` | `sudo gitlab-ctl tail \| tee /tmp/gl-{{clipboard}}-$\|$.txt`
-`/glcf` | `sudo gitlab-ctl reconfigure`
-`/glst` | `sudo gitlab-ctl status`
-`/glrt` | `sudo gitlab-ctl restart`
-`/glsp` | `sudo gitlab-ctl stop`
-`&sde` | `shutdown && exit`
-`/glsri` | `# Support-Resource initialization with a minimal configuration,\n# pinned version & some useful configs\nGRB=/etc/gitlab/gitlab.rb\n\n# Block Gravatar\nsudo echo '127.0.0.1 gravatar.com' >> /etc/hosts\n\n# Clear config file & insert a few useful items\nsudo sed \\\n    -e 's/#.*$//;/^$/d' \\\n    --in-place=.ori \\\n    $GRB && \\\necho "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \\\necho "logging['logrotate_frequency'] = nil" >> $GRB && \\\necho "logging['logrotate_size'] = '5G'" >> $GRB && \\\nsudo gitlab-ctl reconfigure\n\napt install --yes ripgrep jq\n\nsudo apt-mark hold {*g,g}itlab* && \\\nsudo apt --yes upgrade\nsudo reboot\n`
-`*(Q` | `**(Q$\|$)** `
-`(urg` | `([using ripgrep there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))`
-`[Rc` | `[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)`
-`<ds` | `<details><summary>$\|$</summary>{{clipboard}}</details>`
-`c-a-b:` | `Co-authored-by: $\|$ <@gitlab.com>`
-`:glspair` | `:pair: :support-tanuki: $\|${{refer}}`
-`:tfcc` | `:thread: for customer call about :zendesk: . cc @`
-`:tfe` | `:thread: for emergency :point_up:`
+``` /sartpom ``` | ``` shortly after reproducing the problem once more. ```
+``` /itarf ``` | ``` in the affected repository folder (which needs to be a full, up-to-date clone) ```
+``` [gsos ``` | ``` [run our `GitLabSOS` script](https://gitlab.com/gitlab-com/support/toolbox/gitlabsos#run-the-script) {{sartpom}} ```
+``` [ksos ``` | ``` [run our `KubeSOS` script](https://gitlab.com/gitlab-com/support/toolbox/kubesos#kubesos) {{sartpom}} ```
+``` [gfs ``` | ``` [run `fast-stats $\|$`](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases)) ```
+``` [gsz ``` | ``` [run `git-sizer`](https://github.com/github/git-sizer#getting-started) {{itarf}} ```
+``` [gfr ``` | ``` [run `git filter-repo --analyze`](https://github.com/newren/git-filter-repo/#how-do-i-install-it) {{itarf}} ```
+``` /stc ``` | ``` /label ~"Support Team Contributions"\n/assign me\n/assign_reviewer \n/milestone %14. ```
+``` /ber ``` | ``` bundle exec rspec {{clipboard}}\n ```
+``` /glt ``` | ``` {{title}} ```
+``` /glref ``` | ``` {{refer}} ```
+``` [tr) ``` | ``` [{{title}} ({{refer}})]({{clipboard}}) ```
+``` [rt) ``` | ``` [{{refer}} ({{title}})]({{clipboard}}) ```
+``` [r) ``` | ``` [{{refer}}]({{clipboard}}) ```
+``` ~cc ``` | ``` A customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
+``` ~pcc ``` | ``` A ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
+``` ~ucc ``` | ``` A ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
+``` ~lpcc ``` | ``` A large ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
+``` ~lucc ``` | ``` A large ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
+``` [sst ``` | ``` See [Slack thread]({{clipboard}})\n\n> $\|$ ```
+``` .gcy ``` | ``` .gitlab-ci.yml ```
+``` /eg ``` | ``` /etc/gitlab/ ```
+``` .grb ``` | ``` gitlab.rb ```
+``` .gsj ``` | ``` gitlab-secrets.json ```
+``` /vlg ``` | ``` /var/log/gitlab/ ```
+``` /og ``` | ``` /opt/gitlab/ ```
+``` /ebg ``` | ``` sudo -u git {{og}}embedded/bin/git ```
+``` /vog ``` | ``` /var{{og}} ```
+``` /vob ``` | ``` {{vog}}backups ```
+``` /vodr ``` | ``` {{vog}}git-data/repositories/{{clipboard}} ```
+``` /gctl ``` | ``` sudo gitlab-ctl tail \| tee /tmp/gl-{{clipboard}}-$\|$.txt ```
+``` /glcf ``` | ``` sudo gitlab-ctl reconfigure ```
+``` /glst ``` | ``` sudo gitlab-ctl status ```
+``` /glrt ``` | ``` sudo gitlab-ctl restart ```
+``` /glsp ``` | ``` sudo gitlab-ctl stop ```
+``` &sde ``` | ``` shutdown && exit ```
+``` /glsri ``` | ``` # Support-Resource initialization with a minimal configuration,\n# pinned version & some useful configs\nGRB=/etc/gitlab/gitlab.rb\n\n# Block Gravatar\nsudo echo '127.0.0.1 gravatar.com' >> /etc/hosts\n\n# Clear config file & insert a few useful items\nsudo sed \\\n    -e 's/#.*$//;/^$/d' \\\n    --in-place=.ori \\\n    $GRB && \\\necho "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \\\necho "logging['logrotate_frequency'] = nil" >> $GRB && \\\necho "logging['logrotate_size'] = '5G'" >> $GRB && \\\nsudo gitlab-ctl reconfigure\n\napt install --yes ripgrep jq\n\nsudo apt-mark hold {*g,g}itlab* && \\\nsudo apt --yes upgrade\nsudo reboot\n ```
+``` *(Q ``` | ``` **(Q$\|$)**  ```
+``` (urg ``` | ``` ([using `ripgrep` there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)) ```
+``` [Rc ``` | ``` [Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html) ```
+``` <ds ``` | ``` <details><summary>$\|$</summary>{{clipboard}}</details> ```
+``` c-a-b: ``` | ``` Co-authored-by: $\|$ <@gitlab.com> ```
+``` :glspair ``` | ``` :pair: :support-tanuki: $\|${{refer}} ```
+``` :tfcc ``` | ``` :thread: for customer call about :zendesk: . cc @ ```
+``` :tfe ``` | ``` :thread: for emergency :point_up: ```
