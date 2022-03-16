@@ -238,6 +238,9 @@ matches:
     replace: "Co-authored-by: $|$ <@gitlab.com>"
     # Alternative: https://github.com/tj/git-extras/blob/master/Commands.md#git-coauthor
 
+  - trigger: "[ZD"
+    replace: "[ZD {{clipboard}}](https://gitlab.zendesk.com/agent/tickets/{{clipboard}})"
+
   # Slack messages
 
   - trigger: ':glspair'
