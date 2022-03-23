@@ -228,6 +228,12 @@ matches:
   - trigger: "(urg"
     replace: "([using `ripgrep` there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md))"
 
+  - trigger: "[jq"
+    replace: "[jq](https://docs.gitlab.com/ee/administration/troubleshooting/log_parsing.html))"
+
+  - trigger: "[sd"
+    replace: "[sd](https://github.com/chmln/sd#sd---search--displace))"
+
   - trigger: "[Rc"
     replace: "[Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html)"
 
