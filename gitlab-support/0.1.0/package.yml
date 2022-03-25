@@ -116,16 +116,8 @@ matches:
   # Customer comments for issues after internal requests
   #   1. copy internal URL into clipboard
   #   2. summarize / partial-quote if necessary/useful
-  - trigger: "~cc"
-    replace: "A customer [internally]({{clipboard}}) is $|$:\n\n> "
-  - trigger: "~pcc"
-    replace: "A ~\"GitLab Premium\" customer [internally]({{clipboard}}) is $|$:\n\n> "
-  - trigger: "~ucc"
-    replace: "A ~\"GitLab Ultimate\" customer [internally]({{clipboard}}) is $|$:\n\n> "
-  - trigger: "~lpcc"
-    replace: "A large ~\"GitLab Premium\" customer [internally]({{clipboard}}) is $|$:\n\n> "
-  - trigger: "~lucc"
-    replace: "A large ~\"GitLab Ultimate\" customer [internally]({{clipboard}}) is $|$:\n\n> "
+  - trigger: "~cfb"
+    replace: "- Link to request: {{clipboard}} (internal)\n- Priority: ~customer priority::$|$ \n- Why interested: \n- Current solution for this problem: \n- Impact to the customer of not having this: \n- Questions: \n- PM to mention: @"
 
   - trigger: '[sst'
     replace: "See [Slack thread]({{clipboard}})\n\n> $|$"

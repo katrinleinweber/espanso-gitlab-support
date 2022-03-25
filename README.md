@@ -68,11 +68,7 @@ Trigger | Espansion
 ``` [tr) ``` | ``` [{{title}} ({{refer}})]({{clipboard}}) ```
 ``` [rt) ``` | ``` [{{refer}} ({{title}})]({{clipboard}}) ```
 ``` [r) ``` | ``` [{{refer}}]({{clipboard}}) ```
-``` ~cc ``` | ``` A customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
-``` ~pcc ``` | ``` A ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
-``` ~ucc ``` | ``` A ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
-``` ~lpcc ``` | ``` A large ~"GitLab Premium" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
-``` ~lucc ``` | ``` A large ~"GitLab Ultimate" customer [internally]({{clipboard}}) is $\|$:\n\n>  ```
+``` ~cfb ``` | ``` - Link to request: {{clipboard}} (internal)\n- Priority: ~customer priority::$\|$ \n- Why interested: \n- Current solution for this problem: \n- Impact to the customer of not having this: \n- Questions: \n- PM to mention: @ ```
 ``` [sst ``` | ``` See [Slack thread]({{clipboard}})\n\n> $\|$ ```
 ``` .gcy ``` | ``` .gitlab-ci.yml ```
 ``` /eg ``` | ``` /etc/gitlab/ ```
