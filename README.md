@@ -68,7 +68,7 @@ Trigger | Espansion
 ``` [tr) ``` | ``` [{{title}} ({{refer}})]({{clipboard}}) ```
 ``` [rt) ``` | ``` [{{refer}} ({{title}})]({{clipboard}}) ```
 ``` [r) ``` | ``` [{{refer}}]({{clipboard}}) ```
-``` ~cfb ``` | ``` - Link to request: {{clipboard}} (internal)\n- Priority: ~customer priority::$\|$ \n- Why interested: \n- Current solution for this problem: \n- Impact to the customer of not having this: \n- Questions: \n- PM to mention: @ ```
+``` ~cfb ``` | ``` - Link to request: {{clipboard}} (internal)\nPriority: ~customer priority::$\|$ \nWhy interested: \nCurrent solution for this problem: \nImpact to the customer of not having this: \nQuestions: \nPM to mention: @ ```
 ``` [sst ``` | ``` See [Slack thread]({{clipboard}})\n\n> $\|$ ```
 ``` .gcy ``` | ``` .gitlab-ci.yml ```
 ``` /eg ``` | ``` /etc/gitlab/ ```

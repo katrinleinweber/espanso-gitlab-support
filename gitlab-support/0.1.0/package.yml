@@ -117,7 +117,7 @@ matches:
   #   1. copy internal URL into clipboard
   #   2. summarize / partial-quote if necessary/useful
   - trigger: "~cfb"
-    replace: "- Link to request: {{clipboard}} (internal)\n- Priority: ~customer priority::$|$ \n- Why interested: \n- Current solution for this problem: \n- Impact to the customer of not having this: \n- Questions: \n- PM to mention: @"
+    replace: "- Link to request: {{clipboard}} (internal)\nPriority: ~customer priority::$|$ \nWhy interested: \nCurrent solution for this problem: \nImpact to the customer of not having this: \nQuestions: \nPM to mention: @"
 
   - trigger: '[sst'
     replace: "See [Slack thread]({{clipboard}})\n\n> $|$"
