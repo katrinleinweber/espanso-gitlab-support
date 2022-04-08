@@ -94,7 +94,7 @@ Trigger | Espansion
 ``` [Rc ``` | ``` [Rails console](https://docs.gitlab.com/ee/administration/operations/rails_console.html) ```
 ``` <ds ``` | ``` <details><summary>$\|$</summary>{{clipboard}}</details> ```
 ``` c-a-b: ``` | ``` Co-authored-by: $\|$ <@gitlab.com> ```
-``` [ZD ``` | ``` [ZD {{clipboard}}](https://gitlab.zendesk.com/agent/tickets/{{clipboard}}) ```
+``` [ZD ``` | ``` [ZD {{id}}]({{clipboard}}) ```
 ``` :glspair ``` | ``` :pair: :support-tanuki: $\|${{refer}} ```
 ``` :tfcc ``` | ``` :thread: for customer call about :zendesk: . cc @ ```
 ``` :tfe ``` | ``` :thread: for emergency :point_up: ```
