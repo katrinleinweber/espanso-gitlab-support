@@ -203,12 +203,12 @@ matches:
       echo "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \
       echo "logging['logrotate_frequency'] = nil" >> $GRB && \
       echo "logging['logrotate_size'] = '5G'" >> $GRB && \
-      sudo gitlab-ctl reconfigure
+      sudo gitlab-ctl reconfigure &&
 
-      apt install --yes ripgrep jq
-
-      sudo apt-mark hold {*g,g}itlab* && \
-      sudo apt --yes upgrade
+      # Install tools and upgrades without changing GitLab
+      sudo apt-mark hold {*g,g}itlab* &&
+      apt install --yes ripgrep jq &&
+      sudo apt --yes upgrade &&
       sudo reboot
 
 
