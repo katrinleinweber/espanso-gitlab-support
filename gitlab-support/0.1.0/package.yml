@@ -47,7 +47,7 @@ matches:
   # https://docs.gitlab.com/ee/development/code_review.html#dogfooding-the-reviewers-feature,
   # and https://about.gitlab.com/handbook/support/engineering/#support-team-contributions
   - trigger: "/stc"
-    replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer \n/milestone %14."
+    replace: "/label ~\"Support Team Contributions\"\n/assign me\n/assign_reviewer \n/milestone %15."
   - trigger: '/ber'
     replace: "bundle exec rspec {{clipboard}}\n"
     vars:
