@@ -61,7 +61,7 @@ Trigger | Espansion
 ``` [gfs ``` | ``` [run `fast-stats $\|$`](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/#when-to-use-it) (binaries available [here](https://gitlab.com/gitlab-com/support/toolbox/fast-stats/-/releases)) ```
 ``` [gsz ``` | ``` [run `git-sizer`](https://github.com/github/git-sizer#getting-started) {{itarf}} ```
 ``` [gfr ``` | ``` [run `git filter-repo --analyze`](https://github.com/newren/git-filter-repo/#how-do-i-install-it) {{itarf}} ```
-``` /stc ``` | ``` /label ~"Support Team Contributions"\n/assign me\n/assign_reviewer \n/milestone %14. ```
+``` /stc ``` | ``` /label ~"Support Team Contributions"\n/assign me\n/assign_reviewer \n/milestone %15. ```
 ``` /ber ``` | ``` bundle exec rspec {{clipboard}}\n ```
 ``` /glt ``` | ``` {{title}} ```
 ``` /glref ``` | ``` {{refer}} ```
