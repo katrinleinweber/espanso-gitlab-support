@@ -74,6 +74,9 @@ Trigger | Espansion
 ``` /eg ``` | ``` /etc/gitlab/ ```
 ``` .grb ``` | ``` gitlab.rb ```
 ``` .gsj ``` | ``` gitlab-secrets.json ```
+``` `gcy ``` | ``` `{{gcy}}` ```
+``` `grb ``` | ``` `{{grb}}` ```
+``` `gsj ``` | ``` `{{gsj}}` ```
 ``` /vlg ``` | ``` /var/log/gitlab/ ```
 ``` /og ``` | ``` /opt/gitlab/ ```
 ``` /ebg ``` | ``` sudo -u git {{og}}embedded/bin/git ```

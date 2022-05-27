@@ -135,6 +135,28 @@ matches:
   - trigger: '.gsj'
     replace: 'gitlab-secrets.json'
 
+  - trigger: '`gcy'
+    replace: "`{{gcy}}`"
+    vars:
+      - name: gcy
+        type: match
+        params:
+          trigger: '.gcy'
+  - trigger: '`grb'
+    replace: "`{{grb}}`"
+    vars:
+      - name: grb
+        type: match
+        params:
+          trigger: '.grb'
+  - trigger: '`gsj'
+    replace: "`{{gsj}}`"
+    vars:
+      - name: gsj
+        type: match
+        params:
+          trigger: '.gsj'
+
   # Omnibus paths
   #   https://docs.gitlab.com/ee/administration/logs.html
   #   https://docs.gitlab.com/ee/raketasks/backup_restore.html
