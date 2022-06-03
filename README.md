@@ -88,6 +88,7 @@ Trigger | Espansion
 ``` /glst ``` | ``` sudo gitlab-ctl status ```
 ``` /glrt ``` | ``` sudo gitlab-ctl restart ```
 ``` /glsp ``` | ``` sudo gitlab-ctl stop ```
+``` /glsq ``` | ``` sudo gitlab-psql -c "SELECT  FROM  WHERE ;" ```
 ``` &sde ``` | ``` shutdown && exit ```
 ``` /glsri ``` | ``` # Support-Resource initialization with a minimal configuration,\n# pinned version & some useful configs\nGRB=/etc/gitlab/gitlab.rb\n\n# Block Gravatar\nsudo echo '127.0.0.1 gravatar.com' >> /etc/hosts\n\n# Clear config file & insert a few useful items\nsudo sed \\\n    -e 's/#.*$//;/^$/d' \\\n    --in-place=.ori \\\n    $GRB && \\\necho "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \\\necho "logging['logrotate_frequency'] = nil" >> $GRB && \\\necho "logging['logrotate_size'] = '5G'" >> $GRB && \\\nsudo gitlab-ctl reconfigure &&\n\n# Install tools and upgrades without changing GitLab\nsudo apt-mark hold {*g,g}itlab* &&\napt install --yes ripgrep jq &&\nsudo apt --yes upgrade &&\nsudo reboot\n ```
 ``` *(Q ``` | ``` **(Q$\|$)**  ```

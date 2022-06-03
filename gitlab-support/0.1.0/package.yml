@@ -204,6 +204,8 @@ matches:
     replace: 'sudo gitlab-ctl restart'
   - trigger: '/glsp'
     replace: 'sudo gitlab-ctl stop'
+  - trigger: '/glsq'
+    replace: 'sudo gitlab-psql -c "SELECT  FROM  WHERE ;"'
 
   # Shell commands for use in SSH sessions on support-resources
   - trigger: '&sde'
