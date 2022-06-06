@@ -226,7 +226,7 @@ matches:
           $GRB && \
       echo "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \
       echo "logging['logrotate_frequency'] = nil" >> $GRB && \
-      echo "logging['logrotate_size'] = '5G'" >> $GRB && \
+      echo "logging['logrotate_size'] = '1G'" >> $GRB && \
       sudo gitlab-ctl reconfigure &&
 
       # Install tools and upgrades without changing GitLab
