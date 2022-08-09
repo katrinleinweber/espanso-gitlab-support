@@ -1,5 +1,5 @@
 name: "gitlab-support"
 title: "GitLab Support snippets"
-description: "An experiment in GitLab-shared text expansions/snippets."
-version: 0.1.0
+description: "Shared text expansions/snippets for GitLab Support"
+version: 1.0.0
 author: "GitLab Support"

@@ -12,14 +12,14 @@ pre-commit:
       run : 'make inject'
     verify:
       glob: '**/*.rb'
-      run : 'cd gitlab-support/0.1.0 && bundle exec rspec'
+      run : 'cd gitlab-support && bundle exec rspec'
 
 pre-push:
   commands:
     bundle:
       glob: '**/Gemfile*'
       run : >-
-        cd gitlab-support/0.1.0 \
+        cd gitlab-support \
           && bundle update \
           && bundle install \
           && bundle audit
