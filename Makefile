@@ -1,23 +1,21 @@
 PGK=gitlab-support
-VER=$$(/bin/ls ${PGK} \
-	| sort --human-numeric-sort --reverse \
-	| head -1)
+EPP="$$(espanso path packages)/${PGK}/"
 TMP=RM.md
 FIN=README.md
 
 # Test locally, by running RSpec and
 # copying latest yml to local package install
 inject:
-	cp  ${PGK}/${VER}/*.rb \
-		${PGK}/${VER}/package.yml \
-		"$$(espanso path packages)/${PGK}/"
+	mkdir -p ${EPP} || true
+	cp  ${PGK}/*.rb \
+		${PGK}/package.yml \
+		${EPP}
 	espanso restart
 
 # Reinstall from public master
 reset:
-	espanso uninstall ${PGK}
-	espanso install ${PGK} --external  \
-		https://github.com/katrinleinweber/espanso-${PGK}
+	espanso install ${PGK} --external --force --git \
+		https://gitlab.com/gitlab-com/support/toolbox/espanso
 	espanso restart
 
 # Convert YML to Markdown table & append to README
@@ -26,7 +24,7 @@ tabulate:
 	echo '\nTrigger | Espansion' >> ${TMP}
 	echo '------- | ---------' >> ${TMP}
 	yq eval '.matches' -o=json \
-		gitlab-support/**/package.yml \
+		${PGK}/package.yml \
 	| jq -r '.[] | [.trigger, .replace]' \
 	| jq -r '@tsv' \
 	| awk '{print "``` "$$0}' \

@@ -13,8 +13,7 @@ gem install httparty nokogiri
 
 ## Installation
 
-Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository),
-but as this repo is mirrored to GitHub, this works:
+This is [an "external" package](https://espanso.org/docs/packages/external-packages/).
 
 ```shell
 espanso install gitlab-support --external --git https://gitlab.com/gitlab-com/support/toolbox/espanso \
@@ -23,7 +22,7 @@ espanso install gitlab-support --external --git https://gitlab.com/gitlab-com/su
 
 ## Usage
 
-Please review the list of triggers and replacement in [the `package.yml` file](gitlab-support/0.1.0/package.yml).
+Please review the list of triggers and replacement in [the `package.yml` file](gitlab-support/package.yml).
 
 ## Contributing
 
@@ -89,7 +88,7 @@ Trigger | Espansion
 ``` /glsp ``` | ``` sudo gitlab-ctl stop ```
 ``` /glsq ``` | ``` sudo gitlab-psql -c "SELECT  FROM  WHERE ;" ```
 ``` &sde ``` | ``` shutdown && exit ```
-``` /glsri ``` | ``` # Support-Resource initialization with a minimal configuration,\n# pinned version & some useful configs\nGRB=/etc/gitlab/gitlab.rb\n\n# Block Gravatar\nsudo echo '127.0.0.1 gravatar.com' >> /etc/hosts\n\n# Clear config file & insert a few useful items\nsudo sed \\\n    -e 's/#.*$//;/^$/d' \\\n    --in-place=.ori \\\n    $GRB && \\\necho "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \\\necho "logging['logrotate_frequency'] = nil" >> $GRB && \\\necho "logging['logrotate_size'] = '5G'" >> $GRB && \\\nsudo gitlab-ctl reconfigure &&\n\n# Install tools and upgrades without changing GitLab\nsudo apt-mark hold {*g,g}itlab* &&\napt install --yes ripgrep jq &&\nsudo apt --yes upgrade &&\nsudo reboot\n ```
+``` /glsri ``` | ``` # Support-Resource initialization with a minimal configuration,\n# pinned version & some useful configs\nGRB=/etc/gitlab/gitlab.rb\n\n# Block Gravatar\nsudo echo '127.0.0.1 gravatar.com' >> /etc/hosts\n\n# Clear config file & insert a few useful items\nsudo sed \\\n    -e 's/#.*$//;/^$/d' \\\n    --in-place=.ori \\\n    $GRB && \\\necho "gitlab_rails['usage_ping_enabled'] = false" >> $GRB && \\\necho "logging['logrotate_frequency'] = nil" >> $GRB && \\\necho "logging['logrotate_size'] = '1G'" >> $GRB && \\\nsudo gitlab-ctl reconfigure &&\n\n# Install tools and upgrades without changing GitLab\nsudo apt-mark hold {*g,g}itlab* &&\napt install --yes ripgrep jq &&\nsudo apt --yes upgrade &&\nsudo reboot\n ```
 ``` *(Q ``` | ``` **(Q$\|$)**  ```
 ``` (urg ``` | ``` ([using `ripgrep` there](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)) ```
 ``` [jq ``` | ``` [jq](https://docs.gitlab.com/ee/administration/troubleshooting/log_parsing.html) ```
