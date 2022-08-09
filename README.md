@@ -17,9 +17,8 @@ Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository
 but as this repo is mirrored to GitHub, this works:
 
 ```shell
-# espanso uninstall gitlab-support # In case you want to upgrade
-espanso install gitlab-support --external  \
-    https://github.com/katrinleinweber/espanso-gitlab-support
+espanso install gitlab-support --external --git https://gitlab.com/gitlab-com/support/toolbox/espanso \
+  --force  # to overwrite/upgrade already installed package
 ```
 
 ## Usage
